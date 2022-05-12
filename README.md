@@ -223,19 +223,19 @@ There are two steps:
        ```
        select count(*) from metahtml;
         count
---------
- 374181
-(1 row)
+       --------
+       374181
+       (1 row)
        ```
 
     1. This query shows the number of webpages loaded / hour:
        ```
        select * from metahtml_rollup_insert order by insert_hour desc limit 100;
         hll_count |  url   | hostpathquery | hostpath |  host  |      insert_hour
------------+--------+---------------+----------+--------+------------------------
+        -----------+--------+---------------+----------+--------+------------------------
          2 |  15004 |         14530 |    14449 |  12421 | 2022-05-12 05:00:00+00
          9 | 360765 |        362597 |   346409 | 248628 | 2022-05-12 04:00:00+00
-(2 rows)
+        (2 rows)
        ```
 
     1. This query shows the hostnames that you have downloaded the most webpages from:
